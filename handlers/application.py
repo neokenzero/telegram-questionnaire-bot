@@ -18,7 +18,7 @@ QUESTIONS = [
     ("minecraft_nick", "1/6. Напиши свой Minecraft-ник (3–16 символов)."),
     ("age", "2/6. Сколько тебе лет?"),
     ("timezone", "3/6. Какой у тебя часовой пояс? Например, UTC+3."),
-    ("motivation", "4/6. Почему хочешь вступить в House?"),
+    ("motivation", "4/6. Почему хочешь вступить?"),
     ("experience", "5/6. Какой у тебя опыт игры и специализация?"),
     ("availability", "6/6. Сколько времени в неделю готов уделять серверу?"),
 ]
@@ -46,7 +46,7 @@ async def start(message: Message):
         return
     await update_draft(user.id, 0, {})
     await message.answer(
-        "Привет! Заполним заявку на вступление в Minecraft House.\n\n"
+        "Привет! Заполним заявку на вступление.\n\n"
         + QUESTIONS[0][1]
     )
 
